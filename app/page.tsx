@@ -1,9 +1,13 @@
-import { Button } from "@/components/ui/button"
- 
+// import Login from "./login"
+import { Index } from "@/app/pages/index"
+import { CustomNavigationBar } from "@/components/main-nav"
+
 export default function Home() {
   return (
-    <div>
-      <Button>Click me</Button>
+    <div className="w-full h-full">
+      <CustomNavigationBar />
+      {/* <Login /> */}
+      <Index />
     </div>
   )
 }
