@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { SidebarProvider } from "@/components/ui/sidebar"
 
 export const metadata: Metadata = {
   title: "xzpCloud",
@@ -13,9 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
-        {children}
+      <body>
+        <SidebarProvider>
+          {children}
+        </SidebarProvider>
       </body>
     </html>
   );

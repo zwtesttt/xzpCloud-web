@@ -21,57 +21,60 @@ import {
 
 export function CustomNavigationBar() {
     return (
-        <div className="w-full mx-auto p-4">
-            <header className="flex justify-between items-center border-b border-border pb-4">
-                <NavigationMenu>
-                    <NavigationMenuList>
-                        <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    首页
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/vm" legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    虚拟机
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
-                <div className="flex items-center space-x-4">
-                    <NavigationMenu>
+        <div>
+            <div className="fixed top-0 left-0 w-full mx-auto px-4 bg-white z-50">
+                <header className="flex justify-between h-16 items-center border-b border-border">
+                    <NavigationMenu className="flex-1">
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <Link href="/console" legacyBehavior passHref>
+                                <Link href="/" legacyBehavior passHref>
                                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        控制台
+                                        首页
                                     </NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
-                            <NavigationMenuItem className="flex items-center">
-                                <Avatar>
-                                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                                    <AvatarFallback>CN</AvatarFallback>
-                                </Avatar>
-                                <NavigationMenuTrigger>名称</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid gap-3 p-4 w-[200px] bg-white shadow-lg rounded-lg">
-                                        <ListItem href="#" title="修改信息">
-                                            修改您的个人信息。
-                                        </ListItem>
-                                        <ListItem href="#" title="退出登录">
-                                            安全退出您的账户。
-                                        </ListItem>
-                                    </ul>
-                                </NavigationMenuContent>
+                            <NavigationMenuItem>
+                                <Link href="/vm" legacyBehavior passHref>
+                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                        虚拟机
+                                    </NavigationMenuLink>
+                                </Link>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
-                </div>
-            </header>
+                    <div className="flex items-center space-x-4">
+                        <NavigationMenu>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <Link href="/console" legacyBehavior passHref>
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                            控制台
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem className="flex items-center">
+                                    <Avatar>
+                                        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                                        <AvatarFallback>CN</AvatarFallback>
+                                    </Avatar>
+                                    <NavigationMenuTrigger>名称</NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid gap-3 p-4 w-[200px] bg-white shadow-lg rounded-lg">
+                                            <ListItem href="#" title="修改信息">
+                                                修改您的个人信息。
+                                            </ListItem>
+                                            <ListItem href="#" title="退出登录">
+                                                安全退出您的账户。
+                                            </ListItem>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </div>
+                </header>
+            </div>
+            <div className="w-full h-16"></div>
         </div>
     )
 }
