@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Airplay, Gauge, NotebookTabs } from "lucide-react"
 
 import {
     Sidebar,
@@ -14,29 +14,19 @@ import {
 // Menu items.
 const items = [
     {
-        title: "Home",
+        title: "仪表盘",
         url: "#",
-        icon: Home,
+        icon: Gauge,
     },
     {
-        title: "Inbox",
+        title: "虚拟机管理",
         url: "#",
-        icon: Inbox,
+        icon: Airplay,
     },
     {
-        title: "Calendar",
+        title: "订单管理",
         url: "#",
-        icon: Calendar,
-    },
-    {
-        title: "Search",
-        url: "#",
-        icon: Search,
-    },
-    {
-        title: "Settings",
-        url: "#",
-        icon: Settings,
+        icon: NotebookTabs,
     },
 ]
 
