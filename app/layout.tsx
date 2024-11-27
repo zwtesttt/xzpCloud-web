@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import { SidebarProvider } from "@/components/ui/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { CustomNavigationBar } from "@/components/main-nav";
 
 export const metadata: Metadata = {
   title: "xzpCloud",
@@ -13,10 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body>
         <SidebarProvider>
-          {children}
+          <main className="w-screen h-screen overflow-hidden">
+            <CustomNavigationBar />
+            {children}
+          </main>
         </SidebarProvider>
       </body>
     </html>

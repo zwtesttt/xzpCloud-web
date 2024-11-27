@@ -1,16 +1,24 @@
-"use client"
+"use client";
 
-import ConsoleSidebar from "@/components/console-sidebar"
-import { CustomNavigationBar } from "@/components/main-nav"
+import ConsoleSidebar from "@/components/console-sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
-export default function ConsolePage() {
-    return (
-        <div className="min-w-full min-h-full">
-            <CustomNavigationBar />
-            <div className="flex">
-                <ConsoleSidebar />
-                <div>66666</div>
-            </div>
+export default function ConsolePage({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <div className="flex">
+      <ConsoleSidebar />
+      <div className="top-16">
+        <div className="flex items-center gap-2 px-4 py-2">
+          <SidebarTrigger />
+          {/* TODO：面包屑 */}
+          <div className="text-sm font-medium">控制台</div>
         </div>
-    )
+        {children}
+      </div>
+    </div>
+  );
 }
