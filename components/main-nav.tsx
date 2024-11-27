@@ -21,7 +21,7 @@ import {
 
 export function CustomNavigationBar() {
     return (
-        <div>
+        <div className="w-full">
             <div className="fixed top-0 left-0 w-full mx-auto px-4 bg-white z-50">
                 <header className="flex justify-between h-16 items-center border-b border-border">
                     <NavigationMenu className="flex-1">

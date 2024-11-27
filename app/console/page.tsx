@@ -5,13 +5,11 @@ import { CustomNavigationBar } from "@/components/main-nav"
 
 export default function ConsolePage() {
     return (
-        <div>
+        <div className="min-w-full min-h-full">
             <CustomNavigationBar />
-            <div className="flex mt-16">
+            <div className="flex">
                 <ConsoleSidebar />
-                <div className="flex-1 bg-red-500">
-                    <div>66666</div>
-                </div>
+                <div>66666</div>
             </div>
         </div>
     )

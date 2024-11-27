@@ -42,7 +42,7 @@ const items = [
 
 export default function ConsoleSidebar() {
     return (
-        <Sidebar className="z-10 pt-[89px]">
+        <Sidebar className="z-10 pt-16">
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupLabel>Application</SidebarGroupLabel>
