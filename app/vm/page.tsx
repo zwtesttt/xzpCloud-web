@@ -34,7 +34,7 @@ export default function VMPage() {
           <SelectContent>
             <SelectItem value="1h">1</SelectItem>
             <SelectItem value="2h">2</SelectItem>
-            <SelectItem value="4h ">4</SelectItem>
+            <SelectItem value="4h">4</SelectItem>
           </SelectContent>
         </Select>
         <Select>
