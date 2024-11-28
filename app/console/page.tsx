@@ -1,5 +1,7 @@
 "use client";
 
+import { redirect } from "next/navigation";
+
 export default function ConsolePage() {
-  return <div className="text-sm font-medium">控制台</div>;
+  redirect("/console/dashboard");
 }
