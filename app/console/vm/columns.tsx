@@ -15,34 +15,40 @@ import {
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
-export type Order = {
+export type Vm = {
     id: string
-    amount: number
+    name: string
     status: "pending" | "processing" | "success" | "failed"
+    ip: string
     created_at: string
-    pay_at: string
+    expired_at: string
 }
 
-export const columns: ColumnDef<Order>[] = [
+export const columns: ColumnDef<Vm>[] = [
     {
         accessorKey: "id",
-        header: "订单号",
+        header: "虚拟机序号",
     },
+    {
+        accessorKey: "name",
+        header: "名称",
+    },
+
     {
         accessorKey: "status",
         header: "状态",
     },
     {
-        accessorKey: "amount",
-        header: "总金额",
+        accessorKey: "ip",
+        header: "IP地址",
+    },
+    {
+        accessorKey: "expired_at",
+        header: "过期时间",
     },
     {
         accessorKey: "created_at",
         header: "创建时间",
-    },
-    {
-        accessorKey: "pay_at",
-        header: "支付时间",
     },
     {
         id: "操作",

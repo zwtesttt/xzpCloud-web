@@ -83,7 +83,13 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
+/* .select-trigger:focus {
+  border: 2px solid #007bff; 
+  outline: none; 
+} */

@@ -60,7 +60,7 @@ export function CustomNavigationBar() {
                 <NavigationMenuTrigger>名称</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px] bg-white shadow-lg rounded-lg">
-                    <ListItem href="#" title="修改信息">
+                    <ListItem href="/user" title="修改信息">
                       修改您的个人信息。
                     </ListItem>
                     <ListItem href="#" title="退出登录">
