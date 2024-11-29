@@ -14,6 +14,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import EditUser from "@/components/edit-user";
+import { Button } from "@/components/ui/button";
 
 export function CustomNavigationBar() {
   return (
@@ -60,12 +62,8 @@ export function CustomNavigationBar() {
                 <NavigationMenuTrigger>名称</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px] bg-white shadow-lg rounded-lg">
-                    <ListItem href="/user" title="修改信息">
-                      修改您的个人信息。
-                    </ListItem>
-                    <ListItem href="#" title="退出登录">
-                      安全退出您的账户。
-                    </ListItem>
+                    <EditUser />
+                    <Button className="w-full" variant="ghost">退出登录</Button>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
